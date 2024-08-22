@@ -1,4 +1,4 @@
-set scheme s1color
+set scheme s2color
 graph set window fontface "Arial"
 
 
@@ -313,8 +313,7 @@ drop tmp_*
 
 _fun_normalize 90
 gen best_norm = mkt_avg100
-save preregression.dta, replace
-use preregression.dta, clear
+
 drop if inrange(date, td(01mar2020)-182, td(01jun2020)+182)
 
 
@@ -505,9 +504,6 @@ gen month = month(date)
 capture drop month_x_year
 
 
-save test.dta, replace
-
-use test.dta, clear
 
 egen tmp_min_pre = min(date), by(`groupvars')
 egen tmp_min =mean(tmp_min_pre),  by(`groupvars')

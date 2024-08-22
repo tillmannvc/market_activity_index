@@ -1,0 +1,38 @@
+,name,weekdays,weekdays_long,lat,lon,loc,loc2
+1,makanjira,1,Monday,-137117,35042,NA,NA
+2,katuli,2,Tuesday,-141821,3544,lon35_4464lat-14_1831,NA
+3,jalasi,3,Wednesday,-143623,3544,lon35_4511lat-14_362,NA
+4,"ntagaluka, mangochi",5,Friday,-144764,35255,lon35_2865lat-14_4675,lon35_2544lat-14_4823
+5,chimwala,NA,none,-146387,35181,lon35_1809lat-14_6383,NA
+6,ngokwe,1,Monday,-147099,35802,lon35_8029lat-14_7099,NA
+7,nselema,3,Wednesday,-14718,3555,lon35_5524lat-14_7175,NA
+8,ulongwe,6,Saturday,-14842,35170,lon35_1714lat-14_8419,NA
+9,ntaja,6,Saturday,-148654,35527,lon35_5286lat-14_87,NA
+10,chembela,3,Wednesday,-149113,35055,lon35_0552lat-14_9108,NA
+11,balakaboma,NA,none,-149886,34956,lon34_9568lat-14_9884,NA
+12,nsanama,0,Sunday,-149931,35494,lon35_4952lat-14_9975,NA
+13,"mangochiTurnOff, liwonde",2 3 6,"Tuesday, Wednesday, Saturday",-150659,35222,lon35_2186lat-15_0625,NA
+14,phalula,4,Thursday,-152216,34890,lon34_8899lat-15_2243,NA
+15,kambale,4,Thursday,-153049,34681,lon34_6797lat-15_3004,NA
+16,neno,1 5,"Monday, Friday",-153948,34654,lon34_6563lat-15_3998,NA
+17,lisungwi,1 4,"Monday, Thursday",-154383,34779,lon34_7787lat-15_446,NA
+18,"kammwamba, zalewa",2 3 6,"Tuesday, Wednesday, Saturday",-154476,34853,lon34_8547lat-15_4476,NA
+19,mdeka,1 5,"Monday, Friday",-154636,34944,lon34_943lat-15_4636,NA
+20,ligowe,0,Sunday,-154707,34648,lon34_6505lat-15_4722,NA
+21,chifunga,NA,none,-155937,34699,lon34_698lat-15_5932,NA
+22,jenala,0 3,"Wednesday, Sunday",-156707,35321,lon35_3223lat-15_6801,NA
+23,migowi,NA,none,-15719,35689,lon35_6926lat-15_7171,NA
+24,phalombe,1 4,"Monday, Thursday",-158146,35628,lon35_6374lat-15_8082,NA
+25,chazunda,3 6,"Wednesday, Saturday",-159083,34952,lon34_9538lat-15_9094,NA
+26,chapananga,6,Saturday,-159742,34462,lon34_463lat-15_9746,NA
+27,dyeratu,1 5,"Monday, Friday",-160534,34809,lon34_8035lat-16_0444,NA
+28,kakoma,3,Wednesday,-160901,34607,lon34_6145lat-16_0933,NA
+29,livunzu,1 5,"Monday, Friday",-162027,35017,lon35_0148lat-16_2,NA
+30,nchalo,6,Saturday,-162741,34874,lon34_8708lat-16_2744,NA
+31,fatima,NA,none,-164122,3516,lon35_1615lat-16_409,NA
+32,ngabu,4,Thursday,-164652,34876,lon34_8824lat-16_46,lon34_8937lat-16_4883
+33,bangula,3,Wednesday,-165787,35112,lon35_1064lat-16_5778,NA
+34,mtowe,4,Thursday,-167794,35277,lon35_2792lat-16_781,NA
+35,tengani,5,Friday,-168415,35297,lon35_295lat-16_8482,NA
+36,nsanje,3,Wednesday,-169096,35260,lon35_2551lat-16_9203,NA
+37,mbenje,2,Tuesday,-169746,35216,lon35_2169lat-16_9801,NA
