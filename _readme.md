@@ -6,12 +6,11 @@ This repository holds the code used to produce the figures and tables in the mai
 
 Organization of repository:
 
-    data/
-	marketActivity: activity panels underlying Figs 3&4 in the paper
-	marketMaps:	market maps underlying Figures 3,4, S1, S3, S6
-	other:		shapefiles for administrative regions, market validation maps, weather shocks
-    scripts/dataderivation: scripts for identifying markets from satellite imagery and extracting activity measures in Google Earth Engine, as well as postprocessing with Python. 
-    scripts/figuresAndTables: scripts in Stata, Python and Google Earth Engine to produce the figures and tables in the paper
+- data/data/marketActivity: activity panels underlying Figs 3&4 in the paper
+- data/marketMaps:	market maps underlying Figures 3,4, S1, S3, S6
+- data/other:		shapefiles for administrative regions, market validation maps, weather shocks
+- scripts/dataderivation: scripts for identifying markets from satellite imagery and extracting activity measures in Google Earth Engine, as well as postprocessing with Python. 
+- scripts/figuresAndTables: scripts in Stata, Python and Google Earth Engine to produce the figures and tables in the paper
 
 The code for data derivation and some of the figures interacts with a backend managing the overall workflow. 
 
