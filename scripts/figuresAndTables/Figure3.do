@@ -1,9 +1,9 @@
-
+set scheme s1color
 graph set window fontface "Arial"
 
 
 /// ADJUST ///
-//cd "market-activity-index"
+//cd "market_activity_index"
 run scripts\figuresAndTables\_fun_normalize.do
 forv b=0/6{
 	import delimited "data\\marketActivity\\df_KEN_20240702_batch`b'.csv", clear
@@ -451,7 +451,7 @@ tw  (rspike upper lower month, sort color("$color1*0.5") lw(*2)) ///
 	
 global lags 6
 global lagsmin = $lags - 1
-use weather.dta, replace
+use "temp/weather.dta", replace
 	gen year=year(date)
 	gen month=month(date)
 	collapse (sum) precipitation (mean) lat lon, by(month cell_ID year)
@@ -467,12 +467,12 @@ use weather.dta, replace
 		gen rain_L`m'      = L`m'.precipitation
 	}
 	keep if inrange(year, 2016,2023)
-save "weatherShocks.dta", replace
+save "temp/weatherShocks.dta", replace
 	
 global start_date = td(01jul2017)
 global target_var  best_s_full
 
-use "activityAndWeather.dta", clear
+use "temp/activityAndWeather.dta", clear
 
 keep if mkt_lon<36
 
@@ -564,9 +564,9 @@ merge m:1 mktid month using `ranks', nogen
 
 egen month_x_year=group(month year)
 
-geonear mktid mkt_lat mkt_lon using weatherShocks.dta, neighbors(cell_ID lat lon) nearcount(1)
+geonear mktid mkt_lat mkt_lon using temp/weatherShocks.dta, neighbors(cell_ID lat lon) nearcount(1)
 rename nid cell_ID
-merge m:1 month year cell_ID using weatherShocks.dta, nogen keep(3)
+merge m:1 month year cell_ID using temp/weatherShocks.dta, nogen keep(3)
 keep if km_to_nid <10
 
 drop monthCounter

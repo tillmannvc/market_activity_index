@@ -1,13 +1,14 @@
 graph set window fontface "Arial"
+set scheme s1color
 
 spshape2dta "data\other\redrawnZonesDissolved_20211129.shp", replace
-use temp/redrawnZonesDissolved_20211129_shp, clear
+use redrawnZonesDissolved_20211129_shp, clear
 	gen _EMBEDDED=0
 	replace _EMBEDDED=1 if _ID==24 
 save redrawnZonesDissolved_20211129_shp, replace
 
 spshape2dta "data\other\Eth_Adm1.shp", replace 
-use temp\Eth_Adm1_shp, clear
+use Eth_Adm1_shp, clear
 gen use= "Regions"
 replace use ="s1" if inlist(_ID, 3)
 replace use ="s2" if inlist(_ID, 8)
@@ -128,12 +129,12 @@ gen origLon=mkt_lon
 replace mkt_lat = mkt_lon if mkt_lat>20
 replace mkt_lon = origLat if origLon<20
 
- geoinpoly mkt_lat mkt_lon using temp/redrawnZonesDissolved_20211129_shp
+ geoinpoly mkt_lat mkt_lon using redrawnZonesDissolved_20211129_shp
  
-merge m:1 _ID using temp/redrawnZonesDissolved_20211129, keep(1 3) nogen
+merge m:1 _ID using redrawnZonesDissolved_20211129, keep(1 3) nogen
 rename _ID _ID_adm2
 
- geoinpoly mkt_lat mkt_lon using temp/Eth_Adm1_shp
+ geoinpoly mkt_lat mkt_lon using Eth_Adm1_shp
  
 merge m:1 _ID using Eth_Adm1, keep(1 3) nogen
 
