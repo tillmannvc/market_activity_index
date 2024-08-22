@@ -1,6 +1,7 @@
 set scheme s2color
 graph set window fontface "Arial"
 
+capture noisily mkdir temp
 
 /// ADJUST ///
 //cd "market_activity_index"

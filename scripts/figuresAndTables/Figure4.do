@@ -1,6 +1,8 @@
 graph set window fontface "Arial"
 set scheme s1color
 
+capture noisily mkdir temp
+
 spshape2dta "data\other\redrawnZonesDissolved_20211129.shp", replace
 use redrawnZonesDissolved_20211129_shp, clear
 	gen _EMBEDDED=0
@@ -213,7 +215,7 @@ spmap maxInYear using redrawnZonesDissolved_20211129_shp.dta, ///
 	legend(title("Mean market" "activity index," "2020-22", size(vlarge) justification(left)) size(vlarge) pos(1) label(2 "`min'") label(3 "") label( 4 "") label( 5 "") label( 6 "100") label( 7 "") label( 8 "") label( 9 "") label( 10 "")  label( 11 "`max'            ") symysize(*2.2)  ) /// 
 	id(_ID) fcolor("`colors'") clnum(`steps') clmethod(eqint)  ndfcolor(red%10) mos(none) osize(0 0 0 0 0 0 0 0 0 0) ndsize(vvthin)  ///
 	point(data(temp/points.dta) by(admcode) fcolor("$colA" "$colO" "$colT") xcoord(mkt_lon) ycoord(mkt_lat) size(medsmall medsmall medsmall)  legenda(off) leglabel("Markets") legcount) /// 
-	polygon(data(temp/Eth_Adm1_shp) by(use) ocolor(black black black black) osize(thin medthick medthick medthick) opattern(solid solid solid solid) legenda(off) leglabel(1 "Regions")  legs(1)) /// 
+	polygon(data(Eth_Adm1_shp) by(use) ocolor(black black black black) osize(thin medthick medthick medthick) opattern(solid solid solid solid) legenda(off) leglabel(1 "Regions")  legs(1)) /// 
 text(13.9 32.7 "Tigray",   color("$colT") size(vlarge) placement(e)) /// 
 text(12.4 32.7 "Amhara",  color("$colA") size(vlarge) placement(e)) ///  
 text(10 32.7 "Oromia", bcolor(white) box fcolor(white) lw(0) color("$colO") size(vlarge) placement(e)) ///
